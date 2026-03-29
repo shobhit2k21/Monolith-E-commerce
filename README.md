@@ -1,34 +1,29 @@
-# Monolith-E-commerce
+# E-commerce Tool
 
-E-Commerce Backend project in Monolith Architecture
+A production-ready Monolithic E-commerce backend designed with scalability and maintainability. This project implements a full suite of RESTful APIs to manage the core lifecycle of an e-commerce platform, from product discovery to order fulfillment.
 
-# Tech Stack
+## Tech Stack
 
-@ Backend
-  • Java 21+ - Core programming language.
-  
-  • Spring Boot 4.0 - Framework for building the RESTful APIs.
-  
-  • Spring Data JPA - For Object-Relational Mapping (ORM).
+### **Backend & Core**
+* **Language:** Java 21 — Utilizing **Streams API** for data processing and **Optional** for null-safety.
+* **Framework:** Spring Boot 4.0 — High-performance RESTful API development and dependency injection.
+* **Persistence:** Spring Data JPA — Advanced ORM for seamless database abstraction and repository management.
+* **Build Tool:** Maven — Lifecycle management, dependency resolution, and automated builds.
 
-# Database
-  •  PostgreSQL - Primary relational database for persistent storage.
-  
-  •  H2 Database - Used for rapid local development and unit testing.
+### **Data Persistence**
+* **Primary Database:** PostgreSQL — Production-grade relational storage for Users, Products, and Orders.
+* **Development DB:** H2 Database — Lightweight in-memory store for rapid prototyping and unit testing.
 
-# DevOps & Infrastructure
-  •  Docker & Docker Compose - For containerizing the application and database.
-  
-  •  Maven - Dependency management and build automation.
-  
-  •  Postman - For API testing and documentation.
+### **DevOps & Tooling**
+* **Containerization:** Docker & Docker Compose — Orchestrating the application and database environment.
+* **API Testing:** Postman — Comprehensive endpoint validation and request/response documentation.
 
+---
 
-• Engineered a comprehensive RESTful API suite managing 4+ core relational entities (Users, Products,Cart, Orders) using Spring Boot, 
-   handling complex state transitions for order processing.
-   
-• Designed a PostgreSQL schema with Spring Data JPA, implementing One-to-Many and Many-toMany mappings to ensure referential integrity
-   across database tables.
-   
-• Adopted a Layered Architecture (MVC variant) to decouple business logic from data access, resulting in a modular codebase easily extensible
-   for new features like payment integration.
+##  Engineering Highlights
+
+* **Functional Programming:** Leveraged **Java Streams** to perform efficient data filtering and mapping on collection sets, and utilized **Optional** to handle potential null values, significantly reducing the risk of `NullPointerException`.
+* **Core Business Logic:** Developed a robust ordering workflow—managing the lifecycle of Users, Products, and Carts—including a custom service layer to handle complex state transitions (e.g., validating stock before transitioning an Order from `PENDING` to `CONFIRMED`).
+* **Relational Data Modeling:** Architected a normalized **PostgreSQL** schema leveraging **Spring Data JPA**. Managed complex data relationships, including **Many-to-Many** mappings for product categories and **One-to-Many** for user orders, while ensuring strict referential integrity.
+* **Separation of Concerns:** Implemented a clean, layered architecture (MVC variant) to decouple API controllers from the service logic. This approach ensured the business rules remained independent of the data access layer, making the system easier to unit test and maintain.
+* **Environment Orchestration:** Standardized the development environment by containerizing the entire stack. Using **Docker Compose**, I automated the networking between the Spring Boot container and the PostgreSQL instance, ensuring a "plug-and-play" setup for any collaborator.
