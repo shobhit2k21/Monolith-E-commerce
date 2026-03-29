@@ -4,18 +4,23 @@ E-Commerce Backend project in Monolith Architecture
 
 # Tech Stack
 
-# Backend
+@ Backend
   • Java 21+ - Core programming language.
+  
   • Spring Boot 4.0 - Framework for building the RESTful APIs.
+  
   • Spring Data JPA - For Object-Relational Mapping (ORM).
 
 # Database
   •  PostgreSQL - Primary relational database for persistent storage.
+  
   •  H2 Database - Used for rapid local development and unit testing.
 
 # DevOps & Infrastructure
   •  Docker & Docker Compose - For containerizing the application and database.
+  
   •  Maven - Dependency management and build automation.
+  
   •  Postman - For API testing and documentation.
 
 
