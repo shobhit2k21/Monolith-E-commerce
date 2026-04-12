@@ -15,7 +15,7 @@ A production-ready Monolithic E-commerce backend designed with scalability and m
 * **Development DB:** H2 Database — Lightweight in-memory store for rapid prototyping and unit testing.
 
 ### **DevOps & Tooling**
-* **Containerization:** Docker & Docker Compose — Orchestrating the application and database environment.
+* **Containerization:** Docker Compose — Orchestrating the database environment.
 * **API Testing:** Postman — Comprehensive endpoint validation and request/response documentation.
 
 ---
