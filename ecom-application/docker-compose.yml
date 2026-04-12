@@ -4,7 +4,7 @@ services:
     image: postgres:14
     environment:
       POSTGRES_DB: ecomdb
-      POSTGRES-USER: postgres
+      POSTGRES_USER: postgres
       POSTGRES_PASSWORD: shob1536
       TZ: Asia/Kolkata
       PGDATA: /data/postgres
